@@ -36,7 +36,8 @@ namespace WilenInmobiliaria
 
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
-
+            Clientes clientes = new Clientes();
+            clientes.ShowDialog();
         }
 
         private void BtnClientes_MouseEnter(object sender, MouseEventArgs e)

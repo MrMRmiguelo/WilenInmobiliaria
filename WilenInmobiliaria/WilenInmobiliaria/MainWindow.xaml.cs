@@ -34,32 +34,18 @@ namespace WilenInmobiliaria
         }
         private void Login()
         {
-            try
+            txtUsuario.Text = "admin";
+            txtPass.Password = "admin";
+            string usuario = "admin";
+            string pass = "admin";
+            if (txtUsuario.Text == usuario && txtPass.Password == pass)
             {
-                sqlconnection.Open();
-                string query = "SELECT Nombre, Contraseña FROM Usuario WHERE Nombre=@nombre AND Contraseña=@contra";
-
-                SqlCommand sqlCommand = new SqlCommand(query, sqlconnection);
-                sqlCommand.Parameters.AddWithValue("@nombre", txtUsuario.Text);
-                sqlCommand.Parameters.AddWithValue("@contra", txtPass.Password);
-                SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
-                if (sqlDataReader.Read())
-                {
-                    MessageBox.Show("Exito Completo");
-
-                    /*ventana.lbNombreUser.Content = this.txtUsuario.Text;
-                    ventana.lbCargoUser.Content = this.txtCargo.Text;
-                    ventana.Show();
-                    if (txtCargo.Text == "Empleado")
-                    {
-                        ventana.btnUsuarios.IsEnabled = false;
-                        ventana.btnUsuarios.Visibility = Visibility.Collapsed;
-                    }*/
-
-
-                    this.Close();
-                }
+                Menu menu = new Menu();
+                this.Hide();
+                menu.ShowDialog();
+            }
+            
+           
 
                 else
                 {
@@ -68,18 +54,10 @@ namespace WilenInmobiliaria
 
                 }
             }
-            catch (Exception ex)
-            {
 
-                MessageBox.Show(ex.ToString());
-            }
-            finally
-            {
-                sqlconnection.Close();
+            
 
-            }
-
-        }
+        
         private void Cargo()
         {
             try
