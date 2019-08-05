@@ -63,33 +63,46 @@
                         <TextBlock Text="Início" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="60">
+                <ListViewItem Height="60" RenderTransformOrigin="0.5,0.5">
+
+                    <ListViewItem.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="0.992"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="1.983"/>
+                        </TransformGroup>
+                    </ListViewItem.RenderTransform>
                     <StackPanel Orientation="Horizontal">
                         <Button Name="btnClientes" Margin="5" Background="Gainsboro" BorderBrush="White" BorderThickness="2" Height="60" Click="BtnClientes_Click" MouseLeave="BtnClientes_MouseLeave" MouseEnter="BtnClientes_MouseEnter" IsEnabled="True"></Button>
                         <materialDesign:PackIcon Kind="AccountStar" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Clientes" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
-                <ListViewItem Height="60">
+                <ListViewItem Height="60" Selected="ListViewItem_Selected">
                     <StackPanel Orientation="Horizontal">
+                        <Button Name="btnVendedores" Click="BtnVendedores_Click"/>
                         <materialDesign:PackIcon Kind="FormatListBulleted" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Vendedores" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal">
+                        <Button Name="btnInmueble" Click="BtnInmueble_Click"></Button>
                         <materialDesign:PackIcon Kind="TruckDelivery" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Inmueble&#x9;" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal">
+                        <Button Name="btnVentas" Click="BtnVentas_Click"></Button>
                         <materialDesign:PackIcon Kind="Cash" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Ventas" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>
                 </ListViewItem>
                 <ListViewItem Height="60">
                     <StackPanel Orientation="Horizontal">
+                        <Button Name="btnReportes" Click="BtnReportes_Click"></Button>
                         <materialDesign:PackIcon Kind="Report" Width="30" Height="30" VerticalAlignment="Center" Margin="5"/>
                         <TextBlock Text="Reportes" FontSize="17" VerticalAlignment="Center" Margin="20 0"/>
                     </StackPanel>

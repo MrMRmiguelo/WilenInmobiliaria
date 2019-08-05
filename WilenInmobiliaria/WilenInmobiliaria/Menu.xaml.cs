@@ -37,12 +37,15 @@ namespace WilenInmobiliaria
         private void BtnClientes_Click(object sender, RoutedEventArgs e)
         {
             Clientes clientes = new Clientes();
+            this.Hide();
             clientes.ShowDialog();
         }
 
         private void BtnClientes_MouseEnter(object sender, MouseEventArgs e)
         {
-
+            Clientes clientes = new Clientes();
+            this.Hide();
+            clientes.ShowDialog();
         }
 
         private void BtnClientes_MouseLeave(object sender, MouseEventArgs e)
@@ -52,7 +55,7 @@ namespace WilenInmobiliaria
 
         private void BtnApagar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Hide();
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -61,6 +64,35 @@ namespace WilenInmobiliaria
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void ListViewItem_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnVendedores_Click(object sender, RoutedEventArgs e)
+        {
+            Vendedores vendedores = new Vendedores();
+            this.Hide();
+            vendedores.ShowDialog();
+        }
+
+        private void BtnInmueble_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void BtnVentas_Click(object sender, RoutedEventArgs e)
+        {
+            Ventas ventas = new Ventas();
+            this.Hide();
+            ventas.ShowDialog();
+        }
+
+        private void BtnReportes_Click(object sender, RoutedEventArgs e)
         {
 
         }
